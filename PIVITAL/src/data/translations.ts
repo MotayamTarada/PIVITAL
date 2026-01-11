@@ -182,6 +182,16 @@ export const translations = {
             address: "Your Partner for IT Solutions, Software Development & Talent Services.\nWestbahnhof 5\n38118 Braunschweig, Germany",
             legal: "Legal",
             rights: "All rights reserved."
+        },
+        auditForm: {
+            title: "Request an Audit",
+            fullName: "Full Name",
+            company: "Company",
+            role: "Role",
+            email: "Work Email",
+            market: "Market",
+            selectMarket: "Select Market",
+            submit: "Request Audit"
         }
     },
     de: {
@@ -367,6 +377,16 @@ export const translations = {
             address: "Ihr Partner für IT-Lösungen, Softwareentwicklung & Talent Services.\nWestbahnhof 5\n38118 Braunschweig, Deutschland",
             legal: "Rechtliches",
             rights: "Alle Rechte vorbehalten."
+        },
+        auditForm: {
+            title: "Audit anfordern",
+            fullName: "Vollständiger Name",
+            company: "Unternehmen",
+            role: "Rolle",
+            email: "Geschäftliche E-Mail",
+            market: "Markt",
+            selectMarket: "Markt auswählen",
+            submit: "Audit anfordern"
         }
     }
 };

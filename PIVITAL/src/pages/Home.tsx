@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, Code, Users } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import SEO from '../components/SEO';
+import RequestAuditForm from '../components/RequestAuditForm';
 import './Home.css';
 
 const fadeIn = {
@@ -279,7 +280,12 @@ const Home = () => {
             </Section>
 
             {/* Contact Section explicitly for ID referencing */}
-            <div id="contact"></div>
+            {/* Contact / Audit Form */}
+            <Section id="contact" className="section" >
+                <div className="container">
+                    <RequestAuditForm />
+                </div>
+            </Section>
         </div>
     );
 };

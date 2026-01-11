@@ -33,10 +33,10 @@ const Footer = () => {
           <div className="footer-col">
             <h3>{t.footer.legal}</h3>
             <ul>
-              <li><Link to="/imprint">Imprint</Link></li>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms of Use</Link></li>
-              <li><Link to="/data-protection">Data Protection Notice</Link></li>
+              <li><Link to="/imprint">{t.footer.links.imprint}</Link></li>
+              <li><Link to="/privacy">{t.footer.links.privacy}</Link></li>
+              <li><Link to="/terms">{t.footer.links.terms}</Link></li>
+              <li><Link to="/data-protection">{t.footer.links.dataProtection}</Link></li>
             </ul>
           </div>
         </div>
@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 };
 

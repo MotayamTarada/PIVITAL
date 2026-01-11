@@ -181,7 +181,13 @@ export const translations = {
         footer: {
             address: "Your Partner for IT Solutions, Software Development & Talent Services.\nWestbahnhof 5\n38118 Braunschweig, Germany",
             legal: "Legal",
-            rights: "All rights reserved."
+            rights: "All rights reserved.",
+            links: {
+                imprint: "Imprint",
+                privacy: "Privacy Policy",
+                terms: "Terms of Use",
+                dataProtection: "Data Protection Notice"
+            }
         },
         auditForm: {
             title: "Request an Audit",
@@ -192,6 +198,58 @@ export const translations = {
             market: "Market",
             selectMarket: "Select Market",
             submit: "Request Audit"
+        },
+        legal: {
+            imprint: {
+                title: "Legal Notice (Imprint)",
+                status: "Status: 01 September 2025",
+                intro: "This legal notice applies to the website www.pivital.de as well as to the PIVITAL pages on LinkedIn, YouTube, Facebook, X, Xing, Instagram, and TikTok.",
+                sections: {
+                    company: "Legal Notice",
+                    register: "Commercial Register: HRB 211896\nRegister Court: Braunschweig District Court\nRepresented by: Mustafa Salah",
+                    contact: "Contact",
+                    vat: "VAT Identification Number",
+                    vatId: "VAT identification number in accordance with § 27a of the German Value Added Tax Act: DE450543365",
+                    supervisory: "Supervisory Authority",
+                    supervisoryBody: "Federal Employment Agency (Bundesagentur für Arbeit)\nAdolf-Westphal-Straße 2, 24143 Kiel, Germany",
+                    dispute: "EU Online Dispute Resolution",
+                    disputeText: "The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/",
+                    dsa: "Central Contact Point under the Digital Services Act"
+                }
+            },
+            privacy: {
+                title: "Privacy Policy – Summary",
+                overview: "<strong>Overview</strong><br />This website processes personal data when you visit or interact with it. Personal data includes any information that can identify you directly or indirectly.",
+                controller: "Data Controller",
+                collection: "Data Collection",
+                collectionList: ["Data you provide: Contact forms, email, phone, applications.", "Automatically collected data: IP address, browser type, log files."],
+                purpose: "Purpose of Processing",
+                purposeList: ["Operation of website", "Communication & Inquiries", "Contract fulfillment", "Recruitment"],
+                bases: "Legal Bases",
+                basesText: "Consent (Art. 6(1)(a) GDPR), Contract (Art. 6(1)(b)), Legal obligations (Art. 6(1)(c)), Legitimate interests (Art. 6(1)(f)).",
+                hosting: "Hosting",
+                hostingText: "Hostinger International Ltd. (Cyprus). Data transfers rely on EU SCCs.",
+                rights: "User Rights",
+                rightsText: "You have the right to access, rectification, deletion, restriction, portability, and withdrawal of consent."
+            },
+            terms: {
+                title: "Terms of Use",
+                status: "Status: 21 October 2025",
+                sections: [
+                    { title: "1 – Information Services", text: "The website of PIVITAL allows visitors to view services, job vacancies, and apply online." },
+                    { title: "2 – Use of the Website", text: "Use is free of charge. PIVITAL reserves the right to change content at any time." },
+                    { title: "3 – User Registration", text: "Registration requires acceptance of these Terms. Accounts allow application forwarding to partners." },
+                    { title: "4 – Password Protection", text: "Users must keep passwords confidential and secure." },
+                    { title: "5 – User Obligations", text: "Users warrant they hold necessary rights to content provided and will not use the site for unlawful purposes." },
+                    { title: "6 – Liability", text: "Users are liable for damages caused by breach of obligations." }
+                ]
+            },
+            dataProtection: {
+                title: "Data Protection Notice",
+                text1: "PIVITAL uses automated systems to match your applicant profile with available job vacancies (“matching”). Before your applicant profile is used to train our automated systems, it is anonymized or pseudonymized.",
+                text2: "PIVITAL may use my applicant profile for training purposes. You may withdraw this consent at any time by contacting Info@pivital.eu.",
+                references: "Legal References: GDPR Art. 4, 6, 22."
+            }
         }
     },
     de: {
@@ -376,7 +434,13 @@ export const translations = {
         footer: {
             address: "Ihr Partner für IT-Lösungen, Softwareentwicklung & Talent Services.\nWestbahnhof 5\n38118 Braunschweig, Deutschland",
             legal: "Rechtliches",
-            rights: "Alle Rechte vorbehalten."
+            rights: "Alle Rechte vorbehalten.",
+            links: {
+                imprint: "Impressum",
+                privacy: "Datenschutzerklärung",
+                terms: "Nutzungsbedingungen",
+                dataProtection: "Datenschutzhinweis"
+            }
         },
         auditForm: {
             title: "Audit anfordern",
@@ -387,6 +451,58 @@ export const translations = {
             market: "Markt",
             selectMarket: "Markt auswählen",
             submit: "Audit anfordern"
+        },
+        legal: {
+            imprint: {
+                title: "Impressum",
+                status: "Stand: 01. September 2025",
+                intro: "Dieses Impressum gilt für die Website www.pivital.de sowie für die PIVITAL-Seiten auf LinkedIn, YouTube, Facebook, X, Xing, Instagram und TikTok.",
+                sections: {
+                    company: "Angaben gemäß § 5 TMG",
+                    register: "Handelsregister: HRB 211896\nRegistergericht: Amtsgericht Braunschweig\nVertreten durch: Mustafa Salah",
+                    contact: "Kontakt",
+                    vat: "Umsatzsteuer-ID",
+                    vatId: "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE450543365",
+                    supervisory: "Aufsichtsbehörde",
+                    supervisoryBody: "Bundesagentur für Arbeit\nAdolf-Westphal-Straße 2, 24143 Kiel, Deutschland",
+                    dispute: "EU-Streitschlichtung",
+                    disputeText: "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: https://ec.europa.eu/consumers/odr/",
+                    dsa: "Zentrale Kontaktstelle nach dem Digital Services Act"
+                }
+            },
+            privacy: {
+                title: "Datenschutzerklärung – Zusammenfassung",
+                overview: "<strong>Überblick</strong><br />Diese Website verarbeitet personenbezogene Daten, wenn Sie sie besuchen oder mit ihr interagieren. Personenbezogene Daten sind alle Informationen, die Sie direkt oder indirekt identifizieren können.",
+                controller: "Verantwortlicher",
+                collection: "Datenerfassung",
+                collectionList: ["Bereitgestellte Daten: Kontaktformulare, E-Mail, Telefon, Bewerbungen.", "Automatisch erfasste Daten: IP-Adresse, Browsertyp, Log-Dateien."],
+                purpose: "Zweck der Verarbeitung",
+                purposeList: ["Betrieb der Website", "Kommunikation & Anfragen", "Vertragserfüllung", "Recruiting"],
+                bases: "Rechtsgrundlagen",
+                basesText: "Einwilligung (Art. 6(1)(a) DSGVO), Vertrag (Art. 6(1)(b)), Rechtliche Verpflichtungen (Art. 6(1)(c)), Berechtigte Interessen (Art. 6(1)(f)).",
+                hosting: "Hosting",
+                hostingText: "Hostinger International Ltd. (Zypern). Datentransfers basieren auf EU-Standardvertragsklauseln.",
+                rights: "Nutzerrechte",
+                rightsText: "Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Übertragbarkeit und Widerruf Ihrer Einwilligung."
+            },
+            terms: {
+                title: "Nutzungsbedingungen",
+                status: "Stand: 21. Oktober 2025",
+                sections: [
+                    { title: "1 – Informationsdienste", text: "Die Website von PIVITAL ermöglicht Besuchern, Dienste und Stellenangebote einzusehen und sich online zu bewerben." },
+                    { title: "2 – Nutzung der Website", text: "Die Nutzung ist kostenlos. PIVITAL behält sich das Recht vor, Inhalte jederzeit zu ändern." },
+                    { title: "3 – Registrierung", text: "Die Registrierung erfordert die Annahme dieser Bedingungen. Accounts ermöglichen die Weiterleitung von Bewerbungen an Partner." },
+                    { title: "4 – Passwortschutz", text: "Nutzer müssen Passwörter geheim halten und sichern." },
+                    { title: "5 – Pflichten der Nutzer", text: "Nutzer versichern, dass sie die notwendigen Rechte an bereitgestellten Inhalten besitzen und die Seite nicht für rechtswidrige Zwecke nutzen." },
+                    { title: "6 – Haftung", text: "Nutzer haften für Schäden, die durch Verletzung von Pflichten entstehen." }
+                ]
+            },
+            dataProtection: {
+                title: "Datenschutzhinweis",
+                text1: "PIVITAL nutzt automatisierte Systeme, um Ihr Bewerberprofil mit verfügbaren Stellenangeboten abzugleichen („Matching“). Bevor Ihr Profil zum Training unserer Systeme genutzt wird, wird es anonymisiert oder pseudonymisiert.",
+                text2: "PIVITAL darf mein Bewerberprofil zu Trainingszwecken nutzen. Sie können diese Einwilligung jederzeit widerrufen, indem Sie Info@pivital.eu kontaktieren.",
+                references: "Rechtliche Hinweise: DSGVO Art. 4, 6, 22."
+            }
         }
     }
 };

@@ -1,63 +1,126 @@
+/* Hero Section */
 .hero {
-    padding: 12rem 0 8rem;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 14rem 0 10rem;
+    background-color: var(--bg-main);
     color: white;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Optional background element for hero */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-family: var(--font-header);
+    font-size: 4rem;
     font-weight: 800;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(to right, #ffffff, #94a3b8);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 6rem;
+    }
 }
 
 .hero p {
     font-size: 1.25rem;
-    color: #cbd5e1;
-    max-width: 800px;
-    margin: 0 auto 2.5rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    font-weight: 300;
 }
 
+/* Cards */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
 
 .card {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    transition: transform 0.2s, box-shadow 0.2s;
-    border: 1px solid var(--border);
+    background: var(--bg-offset);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: white;
+    font-weight: 700;
 }
 
 .card ul {
-    list-style: disc;
-    padding-left: 1.5rem;
+    list-style: none;
+    /* Removed disc to use custom or none */
+    padding-left: 0;
     color: var(--text-muted);
 }
 
 .card ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding-left: 1rem;
+    position: relative;
 }
 
+.card ul li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+}
+
+/* Tech Grid */
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.tech-tag {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 500;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tech-tag:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Feature List */
 .feature-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -69,52 +132,30 @@
     align-items: center;
     gap: 0.75rem;
     font-weight: 500;
+    color: var(--text-main);
+    background: var(--bg-offset);
+    padding: 1rem;
+    border-radius: 12px;
 }
 
 .check-icon {
     color: var(--accent);
 }
 
-.bg-dark {
-    background-color: var(--primary);
-    color: white;
-}
-
-.bg-dark h2,
-.bg-dark h3 {
-    color: white;
-}
-
-.bg-dark p,
-.bg-dark li {
-    color: #cbd5e1;
-}
-
-.tech-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-.tech-tag {
-    background: var(--bg-offset);
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    font-weight: 500;
-    color: var(--primary);
-    border: 1px solid var(--border);
-}
-
-/* Products Section */
-.product-card {
-    border-left: 4px solid var(--accent);
-}
-
+/* Case Studies */
 .case-study {
     background: var(--bg-offset);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.case-study h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.case-study p {
+    color: var(--text-muted);
 }

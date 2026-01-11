@@ -7,9 +7,36 @@ import RequestAuditForm from '../components/RequestAuditForm';
 import './Home.css';
 
 const fadeIn = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0 }
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.8,
+            ease: [0.22, 1, 0.36, 1] as const
+        }
+    }
 };
+
+const OrbitAnimation = () => (
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-20 pointer-events-none z-0">
+        <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-0 border border-white/10 rounded-full"
+        />
+        <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-20 border border-white/20 rounded-full"
+        />
+        <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
+            className="absolute inset-40 border border-dashed border-white/30 rounded-full"
+        />
+    </div>
+);
 
 interface SectionProps {
     children: React.ReactNode;
@@ -23,8 +50,7 @@ const Section = ({ children, className = "", id = "" }: SectionProps) => (
         className={`section ${className}`}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        viewport={{ once: true, margin: "-100px" }}
         variants={fadeIn}
     >
         {children}
@@ -42,19 +68,20 @@ const Home = () => {
             />
             {/* Hero Section */}
             <section className="hero" id="home">
-                <div className="container">
+                <OrbitAnimation />
+                <div className="container relative z-10">
                     <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
+                        initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                         style={{ whiteSpace: 'pre-line' }}
                     >
                         {t.hero.title}
                     </motion.h1>
                     <motion.p
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ delay: 0.3 }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2, duration: 0.8 }}
                     >
                         {t.hero.subtitle}
                     </motion.p>
@@ -63,7 +90,9 @@ const Home = () => {
                         className="btn btn-primary"
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
-                        transition={{ delay: 0.5 }}
+                        transition={{ delay: 0.4 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
                     >
                         {t.hero.cta} <ArrowRight size={20} style={{ marginLeft: '0.5rem' }} />
                     </motion.a>

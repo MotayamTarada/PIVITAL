@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import { Imprint, Privacy, Terms, DataProtection } from './pages/Legal';
+import Cursor from './components/Cursor';
 import './index.css';
 
 const ScrollToTop = () => {
@@ -23,6 +24,7 @@ function App() {
       <LanguageProvider>
         <Router>
           <ScrollToTop />
+          <Cursor />
           <div className="app">
             <Navbar />
             <main>

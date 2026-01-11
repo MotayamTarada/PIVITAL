@@ -15,8 +15,8 @@ const Footer = () => {
               {t.footer.address}
             </p>
             <p style={{ color: '#94a3b8' }}>
-              +49 (0) 178 6361132<br />
-              info@pivital.de
+              +49 178 6361132<br />
+              Info@pivital.eu
             </p>
           </div>
 

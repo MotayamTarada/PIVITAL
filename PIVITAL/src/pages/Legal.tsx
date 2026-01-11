@@ -31,8 +31,8 @@ export const Imprint = () => (
 
         <h2>Contact</h2>
         <p>
-            Phone: +49 (0) 178 6361132<br />
-            Email: info@pivital.de
+            Phone: +49 178 6361132<br />
+            Email: Info@pivital.eu
         </p>
 
         <h2>VAT Identification Number</h2>
@@ -45,7 +45,7 @@ export const Imprint = () => (
         <p>The European Commission provides a platform for online dispute resolution (ODR): https://ec.europa.eu/consumers/odr/</p>
 
         <h2>Central Contact Point under the Digital Services Act</h2>
-        <p>Email: info@pivital.de</p>
+        <p>Email: Info@pivital.eu</p>
     </LegalLayout>
 );
 
@@ -54,7 +54,7 @@ export const Privacy = () => (
         <p><strong>Overview</strong><br />This website processes personal data when you visit or interact with it. Personal data includes any information that can identify you directly or indirectly.</p>
 
         <h2>Data Controller</h2>
-        <p>PIVITAL GmbH<br />Westbahnhof 5, 38118 Braunschweig, Germany<br />Email: info@pivital.de</p>
+        <p>PIVITAL GmbH<br />Westbahnhof 5, 38118 Braunschweig, Germany<br />Email: Info@pivital.eu</p>
 
         <h2>Data Collection</h2>
         <ul>
@@ -107,7 +107,7 @@ export const Terms = () => (
 export const DataProtection = () => (
     <LegalLayout title="Data Protection Notice">
         <p>PIVITAL uses automated systems to match your applicant profile with available job vacancies (“matching”). Before your applicant profile is used to train our automated systems, it is anonymized or pseudonymized.</p>
-        <p>PIVITAL may use my applicant profile for training purposes. You may withdraw this consent at any time by contacting info@pivital.de.</p>
+        <p>PIVITAL may use my applicant profile for training purposes. You may withdraw this consent at any time by contacting Info@pivital.eu.</p>
         <h2>Legal References</h2>
         <p>GDPR Art. 4, 6, 22.</p>
     </LegalLayout>

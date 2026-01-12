@@ -10,7 +10,9 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-col">
-            <h3>PIVITAL GmbH</h3>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="footer-logo">
+              <h3>PIVITAL GmbH</h3>
+            </Link>
             <p style={{ marginBottom: '1rem', whiteSpace: 'pre-line' }}>
               {t.footer.address}
             </p>

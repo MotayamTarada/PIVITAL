@@ -46,6 +46,11 @@
 .nav-actions {
     display: flex;
     gap: 1rem;
+    align-items: center;
+}
+
+.mobile-menu-btn {
+    display: none;
 }
 
 @media (max-width: 992px) {

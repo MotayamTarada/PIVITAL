@@ -12,6 +12,16 @@
     margin-bottom: 3rem;
 }
 
+.footer-logo {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.footer-logo:hover h3 {
+    color: var(--accent);
+}
+
 .footer-col h3 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;

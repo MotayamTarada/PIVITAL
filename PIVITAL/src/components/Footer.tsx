@@ -11,22 +11,21 @@ const Footer = () => {
         <div className="footer-grid">
           <div className="footer-col">
             <h3>PIVITAL GmbH</h3>
-            <p style={{ color: '#94a3b8', marginBottom: '1rem', whiteSpace: 'pre-line' }}>
+            <p style={{ marginBottom: '1rem', whiteSpace: 'pre-line' }}>
               {t.footer.address}
             </p>
-            <p style={{ color: '#94a3b8' }}>
+            <p>
               +49 178 6361132<br />
-              Info@pivital.eu
+              info@pivitaltech.de
             </p>
           </div>
 
           <div className="footer-col">
-            <h3>{t.nav.services}</h3>
+            <h3>{t.nav.companies}</h3>
             <ul>
-              <li><a href="#services">{t.services.subtitle.split(' ')[0]} {t.services.title}</a></li>
-              <li><a href="#services">{t.hero.title.split('\n')[1].split('&')[0]}</a></li>
-              <li><a href="#services">{t.ai.title}</a></li>
-              <li><a href="#products">{t.products.title}</a></li>
+              <li><Link to="/companies">{t.nav.companies}</Link></li>
+              <li><Link to="/applicants">{t.nav.applicants}</Link></li>
+              <li><a href="/#products">{t.nav.products}</a></li>
             </ul>
           </div>
 

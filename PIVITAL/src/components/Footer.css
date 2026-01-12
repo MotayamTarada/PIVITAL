@@ -1,7 +1,8 @@
 .footer {
-    background-color: var(--primary);
-    color: white;
+    background-color: var(--bg-offset);
+    color: var(--text-main);
     padding: 5rem 0 2rem;
+    border-top: 1px solid var(--border);
 }
 
 .footer-grid {
@@ -14,7 +15,7 @@
 .footer-col h3 {
     font-size: 1.25rem;
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--text-main);
 }
 
 .footer-col ul li {
@@ -26,17 +27,17 @@
 }
 
 .footer-col ul li a:hover {
-    color: white;
+    color: var(--accent);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid var(--border);
     padding-top: 2rem;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 1rem;
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 0.9rem;
 }
 

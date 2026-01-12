@@ -1,37 +1,48 @@
-/* Hero Section */
 .hero {
-    padding: 14rem 0 10rem;
+    padding: 6rem 0 4rem;
     background-color: var(--bg-main);
-    color: white;
+    color: var(--text-main);
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-/* Optional background element for hero */
-.hero::before {
+@media (min-width: 992px) {
+    .hero {
+        padding: 10rem 0 8rem;
+    }
+}
+
+.hero::after {
     content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to top, var(--bg-main), transparent);
+    z-index: 5;
     pointer-events: none;
-    z-index: 0;
 }
 
 .hero h1 {
     font-family: var(--font-header);
-    font-size: 4rem;
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
     line-height: 1.1;
-    color: #ffffff;
+    color: var(--text-main);
+    padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+        padding: 0;
+    }
+}
+
+@media (min-width: 992px) {
     .hero h1 {
         font-size: 6rem;
     }
@@ -39,16 +50,18 @@
 
 .hero p {
     font-size: 1.25rem;
-    color: var(--text-muted);
+    color: #475569;
+    /* Slate 600 */
     max-width: 700px;
     margin: 0 auto 3rem;
     font-weight: 300;
+    line-height: 1.6;
 }
 
 /* Cards */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
 }
@@ -57,7 +70,7 @@
     background: var(--bg-offset);
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
     transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
     position: relative;
     overflow: hidden;
@@ -66,13 +79,13 @@
 .card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
-    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
 }
 
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--text-main);
     font-weight: 700;
 }
 
@@ -106,12 +119,12 @@
 }
 
 .tech-tag {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-offset);
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
     font-weight: 500;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    border: 1px solid var(--border);
     transition: all 0.3s ease;
 }
 
@@ -140,6 +153,19 @@
 
 .check-icon {
     color: var(--accent);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 /* Case Studies */
@@ -147,13 +173,13 @@
     background: var(--bg-offset);
     padding: 2.5rem;
     border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
 }
 
 .case-study h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: white;
+    color: var(--text-main);
 }
 
 .case-study p {

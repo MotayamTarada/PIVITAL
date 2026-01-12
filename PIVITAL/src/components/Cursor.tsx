@@ -35,7 +35,7 @@ const Cursor = () => {
                 x: mousePosition.x - 16,
                 y: mousePosition.y - 16,
                 scale: isHovering ? 2.5 : 1,
-                backgroundColor: isHovering ? 'rgba(191, 255, 0, 0.2)' : 'rgba(255, 255, 255, 0.1)'
+                backgroundColor: isHovering ? 'rgba(0, 86, 179, 0.1)' : 'rgba(0, 86, 179, 0.05)'
             }}
             transition={{
                 type: "spring",
@@ -52,8 +52,8 @@ const Cursor = () => {
                 borderRadius: '50%',
                 pointerEvents: 'none',
                 zIndex: 9999,
-                mixBlendMode: 'screen',
-                border: '1px solid rgba(255,255,255,0.2)'
+                mixBlendMode: 'multiply', // Change to multiply for white bg
+                border: '1px solid rgba(0, 86, 179, 0.2)'
             }}
         />
     );

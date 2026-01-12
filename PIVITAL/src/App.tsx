@@ -4,6 +4,9 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import { Imprint, Privacy, Terms, DataProtection } from './pages/Legal';
+import Applicants from './pages/Applicants';
+import Companies from './pages/Companies';
+import ApplyNow from './pages/Apply';
 import Cursor from './components/Cursor';
 import './index.css';
 
@@ -34,6 +37,9 @@ function App() {
                 <Route path="/privacy" element={<Privacy />} />
                 <Route path="/terms" element={<Terms />} />
                 <Route path="/data-protection" element={<DataProtection />} />
+                <Route path="/applicants" element={<Applicants />} />
+                <Route path="/companies" element={<Companies />} />
+                <Route path="/apply" element={<ApplyNow />} />
               </Routes>
             </main>
             <Footer />

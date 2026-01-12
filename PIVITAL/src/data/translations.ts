@@ -3,9 +3,9 @@ export const translations = {
         nav: {
             home: "Home",
             about: "About Us",
-            services: "Services",
+            companies: "For Companies",
+            applicants: "For Applicants",
             products: "Products",
-            methodology: "Methodology",
             contact: "Request Talent",
         },
         hero: {
@@ -197,7 +197,10 @@ export const translations = {
             email: "Work Email",
             market: "Market",
             selectMarket: "Select Market",
-            submit: "Request Audit"
+            submit: "Request an Audit via Email",
+            contactEmailText: "Or contact us at info@pivitaltech.de",
+            scaling: "What are you scaling? (short)",
+            bottleneck: "Current bottleneck (short)"
         },
         legal: {
             imprint: {
@@ -247,18 +250,93 @@ export const translations = {
             dataProtection: {
                 title: "Data Protection Notice",
                 text1: "PIVITAL uses automated systems to match your applicant profile with available job vacancies (“matching”). Before your applicant profile is used to train our automated systems, it is anonymized or pseudonymized.",
-                text2: "PIVITAL may use my applicant profile for training purposes. You may withdraw this consent at any time by contacting Info@pivital.eu.",
+                text2: "PIVITAL may use my applicant profile for training purposes. You may withdraw this consent at any time by contacting info@pivitaltech.de.",
                 references: "Legal References: GDPR Art. 4, 6, 22."
             }
+        },
+        applicants: {
+            title: "Your benefits For Applicants",
+            intro: "We connect qualified professionals with suitable projects and companies. Our focus is on transparency, reliability, and fair cooperation.",
+            intro2: "Whether you are looking for freelance, project-based, or long-term work, we support you throughout the process.",
+            expect: {
+                title: "What to expect",
+                items: [
+                    "Projects in IT, software development, construction, engineering",
+                    "Remote, hybrid, or on-site assignments",
+                    "Clear project requirements and dedicated contacts",
+                    "Fair compensation and transparent processes",
+                    "Short- and long-term engagements available"
+                ]
+            },
+            lookingFor: {
+                title: "Who we are looking for",
+                items: [
+                    "Developers, engineers, technicians",
+                    "Construction and skilled trade professionals",
+                    "IT specialists and project staff",
+                    "Professionals based in Germany or abroad"
+                ]
+            },
+            cta: "Register and join our network. We will contact you as soon as a suitable project is available."
+        },
+        companies: {
+            title: "For Companies",
+            intro: "We support companies with the provision of qualified professionals for projects of any size. Flexible, reliable, and tailored to your needs.",
+            intro2: "Whether you require short-term support or long-term staffing, we provide the right resources.",
+            services: {
+                title: "Our services",
+                items: [
+                    "Professionals in IT, engineering, and technology",
+                    "Project staffing and staff augmentation",
+                    "Remote, hybrid, or on-site deployment",
+                    "Transparent contracts and billing",
+                    "Access to national and international talent"
+                ]
+            },
+            benefits: {
+                title: "Your Benefits",
+                items: [
+                    "Fast access to skilled professionals",
+                    "Reduced internal recruiting effort",
+                    "Scalable solutions based on project demand",
+                    "Cooperation with a German contractual partner"
+                ]
+            },
+            cta: "Contact us and describe your requirements – we will get back to you promptly."
+        },
+        apply: {
+            title: "Apply Now",
+            intro: "Are you a qualified professional looking for new projects or assignments? Apply now and join our talent network.",
+            intro2: "We place professionals in IT, software development, construction, engineering, both remote and on-site.",
+            howItWorks: {
+                title: "How the application works",
+                items: [
+                    "Fill out the form",
+                    "Upload your CV or profile (optional)",
+                    "We review your information",
+                    "We contact you when suitable projects arise"
+                ]
+            },
+            benefits: {
+                title: "Your benefits",
+                items: [
+                    "Non-binding registration",
+                    "No fees for applicants",
+                    "Transparent communication",
+                    "Fair compensation",
+                    "Projects in Germany and internationally"
+                ]
+            },
+            cta: "Apply now and join our talent pool"
         }
     },
     de: {
         nav: {
             home: "Startseite",
             about: "Über uns",
-            services: "Leistungen",
+            companies: "Für Unternehmen",
+            applicants: "Für Bewerber",
             products: "Produkte",
-            methodology: "Methodik",
             contact: "Jetzt anfragen",
         },
         hero: {
@@ -450,7 +528,10 @@ export const translations = {
             email: "Geschäftliche E-Mail",
             market: "Markt",
             selectMarket: "Markt auswählen",
-            submit: "Audit anfordern"
+            submit: "Audit per E-Mail anfordern",
+            contactEmailText: "Oder kontaktieren Sie uns unter info@pivitaltech.de",
+            scaling: "Was skalieren Sie? (kurz)",
+            bottleneck: "Aktueller Engpass (kurz)"
         },
         legal: {
             imprint: {
@@ -500,9 +581,84 @@ export const translations = {
             dataProtection: {
                 title: "Datenschutzhinweis",
                 text1: "PIVITAL nutzt automatisierte Systeme, um Ihr Bewerberprofil mit verfügbaren Stellenangeboten abzugleichen („Matching“). Bevor Ihr Profil zum Training unserer Systeme genutzt wird, wird es anonymisiert oder pseudonymisiert.",
-                text2: "PIVITAL darf mein Bewerberprofil zu Trainingszwecken nutzen. Sie können diese Einwilligung jederzeit widerrufen, indem Sie Info@pivital.eu kontaktieren.",
+                text2: "PIVITAL darf mein Bewerberprofil zu Trainingszwecken nutzen. Sie können diese Einwilligung jederzeit widerrufen, indem Sie info@pivitaltech.de kontaktieren.",
                 references: "Rechtliche Hinweise: DSGVO Art. 4, 6, 22."
             }
+        },
+        applicants: {
+            title: "Ihre Vorteile als Bewerber",
+            intro: "Wir verbinden qualifizierte Fachkräfte mit passenden Projekten und Unternehmen. Unser Fokus liegt auf Transparenz, Zuverlässigkeit und fairer Zusammenarbeit.",
+            intro2: "Egal ob Sie auf der Suche nach freiberuflicher, projektbezogener oder langfristiger Arbeit sind, wir unterstützen Sie während des gesamten Prozesses.",
+            expect: {
+                title: "Was Sie erwartet",
+                items: [
+                    "Projekte in den Bereichen IT, Softwareentwicklung, Bauwesen, Engineering",
+                    "Remote-, Hybrid- oder Vor-Ort-Einsätze",
+                    "Klare Projektanforderungen und dedizierte Ansprechpartner",
+                    "Faire Vergütung und transparente Prozesse",
+                    "Kurz- und langfristige Engagements verfügbar"
+                ]
+            },
+            lookingFor: {
+                title: "Wen wir suchen",
+                items: [
+                    "Entwickler, Ingenieure, Techniker",
+                    "Fachkräfte aus dem Bauwesen und Handwerk",
+                    "IT-Spezialisten und Projektmitarbeiter",
+                    "Fachkräfte mit Sitz in Deutschland oder im Ausland"
+                ]
+            },
+            cta: "Registrieren Sie sich und werden Sie Teil unseres Netzwerks. Wir kontaktieren Sie, sobald ein passendes Projekt verfügbar ist."
+        },
+        companies: {
+            title: "Für Unternehmen",
+            intro: "Wir unterstützen Unternehmen bei der Bereitstellung von qualifizierten Fachkräften für Projekte jeder Größe. Flexibel, zuverlässig und auf Ihre Bedürfnisse zugeschnitten.",
+            intro2: "Ob Sie kurzfristige Unterstützung oder langfristige Personalbesetzung benötigen, wir liefern die richtigen Ressourcen.",
+            services: {
+                title: "Unsere Leistungen",
+                items: [
+                    "Fachkräfte in IT, Engineering und Technologie",
+                    "Projektbesetzung und Staff Augmentation",
+                    "Remote-, Hybrid- oder Vor-Ort-Einsatz",
+                    "Transparente Verträge und Abrechnung",
+                    "Zugang zu nationalen und internationalen Talenten"
+                ]
+            },
+            benefits: {
+                title: "Ihre Vorteile",
+                items: [
+                    "Schneller Zugriff auf qualifizierte Fachkräfte",
+                    "Reduzierter interner Recruiting-Aufwand",
+                    "Skalierbare Lösungen je nach Projektbedarf",
+                    "Zusammenarbeit mit einem deutschen Vertragspartner"
+                ]
+            },
+            cta: "Kontaktieren Sie uns und beschreiben Sie Ihre Anforderungen – wir melden uns umgehend bei Ihnen."
+        },
+        apply: {
+            title: "Jetzt bewerben",
+            intro: "Sind Sie eine qualifizierte Fachkraft und auf der Suche nach neuen Projekten oder Einsätzen? Bewerben Sie sich jetzt und treten Sie unserem Talent-Netzwerk bei.",
+            intro2: "Wir vermitteln Fachkräfte in den Bereichen IT, Softwareentwicklung, Bauwesen, Engineering, sowohl remote als auch vor Ort.",
+            howItWorks: {
+                title: "So funktioniert die Bewerbung",
+                items: [
+                    "Füllen Sie das Formular aus",
+                    "Laden Sie Ihren Lebenslauf oder Ihr Profil hoch (optional)",
+                    "Wir prüfen Ihre Informationen",
+                    "Wir kontaktieren Sie, wenn passende Projekte anstehen"
+                ]
+            },
+            benefits: {
+                title: "Ihre Vorteile",
+                items: [
+                    "Unverbindliche Registrierung",
+                    "Keine Gebühren für Bewerber",
+                    "Transparente Kommunikation",
+                    "Faire Vergütung",
+                    "Projekte in Deutschland und international"
+                ]
+            },
+            cta: "Jetzt bewerben und unserem Talent-Pool beitreten"
         }
     }
 };

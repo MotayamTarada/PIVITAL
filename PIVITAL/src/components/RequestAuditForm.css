@@ -1,19 +1,31 @@
 .audit-form-container {
-    background: var(--bg-offset);
+    background: white;
     padding: 3rem;
     border-radius: 1.5rem;
     /* Smoother rounding */
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     margin: 0 auto;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .audit-form-container {
+        padding: 2rem 1.5rem;
+    }
 }
 
 .audit-form-container h2 {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 2rem;
-    color: white;
+    background: linear-gradient(90deg, #0056b3, #00a3ff, #0056b3);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine-text 5s linear infinite;
 }
 
 .form-group {
@@ -33,19 +45,19 @@
 .form-input {
     width: 100%;
     padding: 0.875rem 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border);
     border-radius: 0.75rem;
     font-size: 1rem;
     transition: all 0.3s;
-    background-color: rgba(255, 255, 255, 0.03);
-    color: white;
+    background-color: #fcfcfc;
+    color: var(--text-main);
 }
 
 .form-input:focus {
     outline: none;
     border-color: var(--accent);
     box-shadow: 0 0 0 1px var(--accent);
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: white;
 }
 
 .form-select {
@@ -58,27 +70,73 @@
 
 /* Option styling is tricky in CSS, but background ensures readability */
 .form-select option {
-    background-color: var(--bg-main);
-    color: white;
+    background-color: white;
+    color: var(--text-main);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 100px;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 1rem;
-    background-color: var(--accent);
-    color: black;
+    padding: 1.25rem;
+    background: linear-gradient(-45deg, #0056b3, #00a3ff, #004494, #0081ff);
+    background-size: 400% 400%;
+    animation: gradient-pulse 10s ease infinite;
+    color: white;
     font-weight: 700;
-    border-radius: 2rem;
+    border-radius: 3rem;
     font-size: 1rem;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     margin-top: 1rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    border: none;
+    box-shadow: 0 10px 20px -10px rgba(0, 86, 179, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes gradient-pulse {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transition: all 0.6s;
 }
 
 .submit-btn:hover {
-    background-color: var(--accent-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(191, 255, 0, 0.3);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 30px -10px rgba(0, 86, 179, 0.6);
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+.submit-btn:active {
+    transform: translateY(-2px) scale(0.98);
 }

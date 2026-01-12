@@ -9,10 +9,12 @@ const RequestAuditForm = () => {
         company: '',
         role: '',
         email: '',
-        market: ''
+        market: '',
+        scaling: '',
+        bottleneck: ''
     });
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -21,8 +23,23 @@ const RequestAuditForm = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Audit Requested:', formData);
-        alert('Thank you! Your audit request has been received.');
+        // Construct mailto link
+        const subject = `Audit Request: ${formData.company}`;
+        const body = `
+Name: ${formData.fullName}
+Company: ${formData.company}
+Role: ${formData.role}
+Email: ${formData.email}
+Market: ${formData.market}
+
+Scaling:
+${formData.scaling}
+
+Bottleneck:
+${formData.bottleneck}
+        `;
+
+        window.location.href = `mailto:info@pivitaltech.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (
@@ -91,17 +108,44 @@ const RequestAuditForm = () => {
                         onChange={handleChange}
                     >
                         <option value="">{t.auditForm.selectMarket}</option>
-                        <option value="IT">IT & Tech</option>
-                        <option value="Finance">Finance</option>
-                        <option value="Automotive">Automotive</option>
-                        <option value="Retail">Retail</option>
+                        <option value="Germany">Germany</option>
+                        <option value="EU">EU</option>
+                        <option value="USA/Canada">USA and Canada</option>
+                        <option value="GCC">GCC</option>
                         <option value="Other">Other</option>
                     </select>
                 </div>
 
-                <button type="submit" className="submit-btn">
+                <div className="form-group">
+                    <label htmlFor="scaling">{t.auditForm.scaling}</label>
+                    <textarea
+                        id="scaling"
+                        name="scaling"
+                        className="form-input form-textarea"
+                        value={formData.scaling}
+                        onChange={handleChange}
+                        rows={3}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="bottleneck">{t.auditForm.bottleneck}</label>
+                    <textarea
+                        id="bottleneck"
+                        name="bottleneck"
+                        className="form-input form-textarea"
+                        value={formData.bottleneck}
+                        onChange={handleChange}
+                        rows={3}
+                    />
+                </div>
+
+                <button type="submit" className="submit-btn form-submit-btn">
                     {t.auditForm.submit}
                 </button>
+                <p style={{ marginTop: '1rem', textAlign: 'center', fontSize: '0.9rem', color: '#64748b' }}>
+                    {t.auditForm.contactEmailText}
+                </p>
             </form>
         </div>
     );

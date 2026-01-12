@@ -32,7 +32,7 @@ export const Imprint = () => {
             <h2>{t.legal.imprint.sections.contact}</h2>
             <p>
                 {language === 'de' ? 'Telefon' : 'Phone'}: +49 178 6361132<br />
-                E-Mail: Info@pivital.eu
+                E-Mail: info@pivitaltech.de
             </p>
 
             <h2>{t.legal.imprint.sections.vat}</h2>
@@ -45,7 +45,7 @@ export const Imprint = () => {
             <p>{t.legal.imprint.sections.disputeText}</p>
 
             <h2>{t.legal.imprint.sections.dsa}</h2>
-            <p>E-Mail: Info@pivital.eu</p>
+            <p>E-Mail: info@pivitaltech.de</p>
         </LegalLayout>
     );
 };
@@ -57,7 +57,7 @@ export const Privacy = () => {
             <p dangerouslySetInnerHTML={{ __html: t.legal.privacy.overview }}></p>
 
             <h2>{t.legal.privacy.controller}</h2>
-            <p>PIVITAL GmbH<br />Westbahnhof 5, 38118 Braunschweig, {language === 'de' ? 'Deutschland' : 'Germany'}<br />E-Mail: Info@pivital.eu</p>
+            <p>PIVITAL GmbH<br />Westbahnhof 5, 38118 Braunschweig, {language === 'de' ? 'Deutschland' : 'Germany'}<br />E-Mail: info@pivitaltech.de</p>
 
             <h2>{t.legal.privacy.collection}</h2>
             <ul>

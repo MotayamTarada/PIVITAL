@@ -7,10 +7,11 @@ import RequestAuditForm from '../components/RequestAuditForm';
 import './Home.css';
 
 const fadeIn = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: 40, scale: 0.98 },
     visible: {
         opacity: 1,
         y: 0,
+        scale: 1,
         transition: {
             duration: 0.8,
             ease: [0.22, 1, 0.36, 1] as const
@@ -19,21 +20,76 @@ const fadeIn = {
 };
 
 const OrbitAnimation = () => (
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-20 pointer-events-none z-0">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] opacity-10 pointer-events-none z-0">
         <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 border border-white/10 rounded-full"
+            className="absolute inset-0 border border-blue-500/10 rounded-full"
         />
         <motion.div
             animate={{ rotate: -360 }}
             transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-20 border border-white/20 rounded-full"
+            className="absolute inset-20 border border-blue-500/15 rounded-full"
         />
         <motion.div
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-40 border border-dashed border-white/30 rounded-full"
+            className="absolute inset-40 border border-dashed border-blue-500/20 rounded-full"
+        />
+    </div>
+);
+
+const BackgroundBlobs = () => (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none z-0 opacity-60">
+        <motion.div
+            animate={{
+                x: [0, 100, -100, 0],
+                y: [0, -150, 150, 0],
+                scale: [1, 1.2, 0.9, 1],
+            }}
+            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] rounded-full"
+            style={{
+                background: 'radial-gradient(circle, rgba(0, 138, 255, 0.25) 0%, transparent 70%)',
+                filter: 'blur(80px)'
+            }}
+        />
+        <motion.div
+            animate={{
+                x: [0, -150, 150, 0],
+                y: [0, 100, -100, 0],
+                scale: [1, 0.8, 1.2, 1],
+            }}
+            transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] rounded-full"
+            style={{
+                background: 'radial-gradient(circle, rgba(0, 86, 179, 0.2) 0%, transparent 70%)',
+                filter: 'blur(100px)'
+            }}
+        />
+        <motion.div
+            animate={{
+                x: [0, 50, -50, 0],
+                y: [0, 50, -50, 0],
+            }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[40%] left-[20%] w-[300px] h-[300px] rounded-full"
+            style={{
+                background: 'radial-gradient(circle, rgba(0, 163, 255, 0.15) 0%, transparent 70%)',
+                filter: 'blur(60px)'
+            }}
+        />
+        <motion.div
+            animate={{
+                x: [0, 200, -200, 0],
+                y: [0, -50, 50, 0],
+            }}
+            transition={{ duration: 35, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-[20%] right-[15%] w-[400px] h-[400px] rounded-full"
+            style={{
+                background: 'radial-gradient(circle, rgba(0, 68, 148, 0.15) 0%, transparent 70%)',
+                filter: 'blur(90px)'
+            }}
         />
     </div>
 );
@@ -68,9 +124,11 @@ const Home = () => {
             />
             {/* Hero Section */}
             <section className="hero" id="home">
+                <BackgroundBlobs />
                 <OrbitAnimation />
                 <div className="container relative z-10">
                     <motion.h1
+                        className="gradient-text"
                         initial={{ opacity: 0, y: 50, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -156,11 +214,12 @@ const Home = () => {
             </Section>
 
             {/* AI & Data */}
-            <Section className="bg-dark">
-                <div className="container">
+            <Section className="section-bg relative overflow-hidden">
+                <BackgroundBlobs />
+                <div className="container relative z-10">
                     <div className="flex flex-col md:flex-row gap-5">
                         <div>
-                            <h2 className="heading-lg mb-4">{t.ai.title}</h2>
+                            <h2 className="heading-lg mb-4 gradient-text">{t.ai.title}</h2>
                             <p className="text-lg mb-4">
                                 {t.ai.description}
                             </p>
